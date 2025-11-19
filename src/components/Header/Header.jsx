@@ -6,6 +6,8 @@ import { FiSun, FiMoon, FiMenu, FiX } from 'react-icons/fi'
 import { toggleTheme } from '../../store/slices/themeSlice'
 import { toggleMenu, closeMenu } from '../../store/slices/uiSlice'
 import './Header.css'
+import logo from "../../assets/entolic-logo.png";
+
 
 const Header = () => {
   const location = useLocation()
@@ -39,7 +41,7 @@ const Header = () => {
         
           <Link to="/" className="logo" onClick={handleMenuClick}>
             <div className="logo-container">
-              <img src="/entolic-logo.png" alt="Entolic Logo" className="logo-image" />
+              <img src={logo} alt="Entolic Logo" className="logo-image" />
               <div className="logo-text">
                 <span className="logo-title">Entolic Systems</span>
                 <span className="logo-subtitle">Infinite Innovation</span>
