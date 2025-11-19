@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: "./",   // <── THIS FIXES IMAGE + LOGO ISSUE
+  base: "./",   // Required for Netlify to load images correctly
 })
