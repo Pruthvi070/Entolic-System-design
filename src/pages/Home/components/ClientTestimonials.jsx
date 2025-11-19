@@ -55,12 +55,12 @@ const ClientTestimonials = () => {
   ]
 
   const clientLogos = [
-    { name: 'TechFlow', logo: 'https://via.placeholder.com/120x60/FF6B35/FFFFFF?text=TechFlow' },
-    { name: 'InnovateCorp', logo: 'https://via.placeholder.com/120x60/2C3E50/FFFFFF?text=InnovateCorp' },
-    { name: 'HealthTech', logo: 'https://via.placeholder.com/120x60/FF6B35/FFFFFF?text=HealthTech' },
-    { name: 'Manufacturing Plus', logo: 'https://via.placeholder.com/120x60/2C3E50/FFFFFF?text=MfgPlus' },
-    { name: 'RetailMax', logo: 'https://via.placeholder.com/120x60/FF6B35/FFFFFF?text=RetailMax' },
-    { name: 'DataCorp', logo: 'https://via.placeholder.com/120x60/2C3E50/FFFFFF?text=DataCorp' }
+    { name: 'Stripe', logo: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=150&h=60&fit=crop&q=80' },
+    { name: 'Shopify', logo: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=150&h=60&fit=crop&q=80' },
+    { name: 'Slack', logo: 'https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=150&h=60&fit=crop&q=80' },
+    { name: 'Airbnb', logo: 'https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=150&h=60&fit=crop&q=80' },
+    { name: 'Netflix', logo: 'https://images.unsplash.com/photo-1574267432644-f610f5b7e93c?w=150&h=60&fit=crop&q=80' },
+    { name: 'Spotify', logo: 'https://images.unsplash.com/photo-1614680376593-902f74cf0d41?w=150&h=60&fit=crop&q=80' }
   ]
 
   useEffect(() => {

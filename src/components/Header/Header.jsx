@@ -38,11 +38,11 @@ const Header = () => {
         <div className="header-content">
         
           <Link to="/" className="logo" onClick={handleMenuClick}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-              <img src="/entolic-logo.png" alt="Entolic Logo" style={{ height: '50px', width: 'auto' }} />
-              <div style={{ display: 'flex', flexDirection: 'column', lineHeight: '1.2' }}>
-                <span style={{ fontSize: '1.5rem', fontWeight: 'bold', color: '#1a1a2e' }}>Entolic Systems</span>
-                <span style={{ fontSize: '1.25rem', fontWeight: '500', color: '#ff6b35' }}>Infinite Innovation</span>
+            <div className="logo-container">
+              <img src="/entolic-logo.png" alt="Entolic Logo" className="logo-image" />
+              <div className="logo-text">
+                <span className="logo-title">Entolic Systems</span>
+                <span className="logo-subtitle">Infinite Innovation</span>
               </div>
             </div>
           </Link>

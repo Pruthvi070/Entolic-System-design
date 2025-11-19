@@ -1,10 +1,15 @@
 .final-cta {
-  background: var(--gradient-secondary);
-  color: var(--white);
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.08) 0%, rgba(44, 62, 80, 0.08) 100%);
+  color: var(--primary-gray);
   position: relative;
   overflow: hidden;
   padding: 100px 0;
   margin-top: 80px;
+}
+
+[data-theme="dark"] .final-cta {
+  background: var(--gradient-secondary);
+  color: var(--white);
 }
 
 .cta-background {
@@ -131,16 +136,27 @@
   align-items: center;
   gap: 15px;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--white);
   backdrop-filter: blur(10px);
   border-radius: 15px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 107, 53, 0.2);
   transition: var(--transition-smooth);
+  box-shadow: var(--shadow-light);
+}
+
+[data-theme="dark"] .cta-feature {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .cta-feature:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 107, 53, 0.05);
   transform: translateY(-5px);
+  border-color: var(--primary-orange);
+}
+
+[data-theme="dark"] .cta-feature:hover {
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .feature-icon {
@@ -189,18 +205,29 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  color: var(--white);
+  color: var(--primary-orange);
   text-decoration: none;
   font-weight: 500;
   transition: var(--transition-smooth);
   padding: 10px 20px;
   border-radius: 25px;
+  border: 2px solid var(--primary-orange);
+}
+
+[data-theme="dark"] .contact-option {
+  color: var(--white);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .contact-option:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--primary-orange);
+  color: var(--white);
   transform: translateY(-2px);
+}
+
+[data-theme="dark"] .contact-option:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
 }
 
 .cta-guarantee {

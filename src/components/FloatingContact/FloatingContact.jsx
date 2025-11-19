@@ -1,19 +1,36 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { FiMessageCircle, FiX, FiSend } from 'react-icons/fi'
+import { FiMessageCircle, FiX, FiSend, FiMail, FiPhone } from 'react-icons/fi'
 import './FloatingContact.css'
 
 const FloatingContact = () => {
   const [isOpen, setIsOpen] = useState(false)
-  const [message, setMessage] = useState('')
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  })
+  const [submitted, setSubmitted] = useState(false)
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (message.trim()) {
+    if (formData.name && formData.email && formData.message) {
       // Handle message submission
-      console.log('Message sent:', message)
-      setMessage('')
-      setIsOpen(false)
+      console.log('Quick contact submitted:', formData)
+      setSubmitted(true)
+      setTimeout(() => {
+        setFormData({ name: '', email: '', message: '' })
+        setSubmitted(false)
+        setIsOpen(false)
+      }, 2000)
     }
   }
 
@@ -40,22 +57,58 @@ const FloatingContact = () => {
           >
             <div className="panel-header">
               <h3>Quick Contact</h3>
-              <p>Send us a message and we'll get back to you!</p>
+              <p>Send us a message and we'll get back to you within 24 hours!</p>
             </div>
             
-            <form onSubmit={handleSubmit} className="contact-form">
-              <textarea
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                placeholder="Type your message here..."
-                rows="4"
-                required
-              />
-              <button type="submit" className="send-btn">
-                <FiSend />
-                Send Message
-              </button>
-            </form>
+            {!submitted ? (
+              <form onSubmit={handleSubmit} className="quick-contact-form">
+                <input
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Your Name"
+                  required
+                  className="quick-input"
+                />
+                <input
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Your Email"
+                  required
+                  className="quick-input"
+                />
+                <textarea
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Type your message here..."
+                  rows="3"
+                  required
+                  className="quick-textarea"
+                />
+                <button type="submit" className="send-btn">
+                  <FiSend />
+                  Send Message
+                </button>
+              </form>
+            ) : (
+              <div className="success-panel">
+                <div className="success-icon">✓</div>
+                <p>Message sent successfully!</p>
+              </div>
+            )}
+
+            <div className="panel-footer">
+              <a href="mailto:info@entolicsystems.com" className="quick-link">
+                <FiMail /> info@entolicsystems.com
+              </a>
+              <a href="tel:+919765171957" className="quick-link">
+                <FiPhone /> +91 9765171957
+              </a>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
