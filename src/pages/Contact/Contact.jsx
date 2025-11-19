@@ -1,0 +1,25 @@
+import React from 'react'
+import { motion } from 'framer-motion'
+
+const Contact = () => {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+      style={{ paddingTop: '100px', minHeight: '100vh' }}
+    >
+      <div className="container">
+        <div className="section">
+          <h1 className="section-title">Contact Us</h1>
+          <p style={{ textAlign: 'center', fontSize: '1.2rem', color: 'var(--light-gray)', maxWidth: '600px', margin: '0 auto' }}>
+            Get in touch with our team to discuss your project requirements.
+          </p>
+        </div>
+      </div>
+    </motion.div>
+  )
+}
+
+export default Contact

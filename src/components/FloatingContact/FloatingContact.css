@@ -1,0 +1,129 @@
+.floating-contact-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: var(--gradient-primary);
+  border: none;
+  border-radius: 50%;
+  color: var(--white);
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-heavy);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-smooth);
+}
+
+.floating-contact-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 60px rgba(255, 107, 53, 0.3);
+}
+
+.floating-contact-panel {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 320px;
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: var(--shadow-heavy);
+  z-index: 998;
+  overflow: hidden;
+  border: 1px solid rgba(255, 107, 53, 0.1);
+}
+
+[data-theme="dark"] .floating-contact-panel {
+  background: var(--dark-gray);
+  border: 1px solid rgba(255, 107, 53, 0.2);
+}
+
+.panel-header {
+  background: var(--gradient-primary);
+  color: var(--white);
+  padding: 20px;
+  text-align: center;
+}
+
+.panel-header h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.2rem;
+}
+
+.panel-header p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.contact-form {
+  padding: 20px;
+}
+
+.contact-form textarea {
+  width: 100%;
+  border: 2px solid rgba(255, 107, 53, 0.2);
+  border-radius: 10px;
+  padding: 15px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  resize: vertical;
+  min-height: 100px;
+  margin-bottom: 15px;
+  transition: var(--transition-smooth);
+  background: var(--white);
+  color: var(--primary-gray);
+}
+
+[data-theme="dark"] .contact-form textarea {
+  background: var(--secondary-gray);
+  color: var(--white);
+  border-color: rgba(255, 107, 53, 0.3);
+}
+
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--primary-orange);
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
+}
+
+.send-btn {
+  width: 100%;
+  background: var(--gradient-primary);
+  color: var(--white);
+  border: none;
+  border-radius: 10px;
+  padding: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.send-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+}
+
+@media (max-width: 768px) {
+  .floating-contact-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+
+  .floating-contact-panel {
+    bottom: 80px;
+    right: 20px;
+    left: 20px;
+    width: auto;
+  }
+}

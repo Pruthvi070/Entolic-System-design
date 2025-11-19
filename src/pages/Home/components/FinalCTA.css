@@ -1,0 +1,291 @@
+.final-cta {
+  background: var(--gradient-secondary);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0;
+  margin-top: 80px;
+}
+
+.cta-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.cta-shapes {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.cta-shape {
+  position: absolute;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: float 10s ease-in-out infinite;
+}
+
+.cta-shape-1 {
+  width: 100px;
+  height: 100px;
+  top: 10%;
+  left: 5%;
+  animation-delay: 0s;
+}
+
+.cta-shape-2 {
+  width: 150px;
+  height: 150px;
+  top: 20%;
+  right: 10%;
+  animation-delay: 2s;
+}
+
+.cta-shape-3 {
+  width: 80px;
+  height: 80px;
+  bottom: 30%;
+  left: 15%;
+  animation-delay: 4s;
+}
+
+.cta-shape-4 {
+  width: 120px;
+  height: 120px;
+  bottom: 10%;
+  right: 20%;
+  animation-delay: 1s;
+}
+
+.cta-shape-5 {
+  width: 60px;
+  height: 60px;
+  top: 60%;
+  left: 8%;
+  animation-delay: 3s;
+}
+
+.cta-shape-6 {
+  width: 90px;
+  height: 90px;
+  top: 40%;
+  right: 5%;
+  animation-delay: 5s;
+}
+
+.cta-shape-7 {
+  width: 110px;
+  height: 110px;
+  bottom: 50%;
+  left: 50%;
+  animation-delay: 6s;
+}
+
+.cta-shape-8 {
+  width: 70px;
+  height: 70px;
+  top: 80%;
+  right: 40%;
+  animation-delay: 7s;
+}
+
+.cta-content {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.cta-subtitle {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-bottom: 50px;
+  opacity: 0.9;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.cta-feature {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: var(--transition-smooth);
+}
+
+.cta-feature:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.feature-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.feature-text strong {
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.feature-text span {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.cta-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.btn-large {
+  padding: 20px 40px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.cta-contact-options {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.contact-option:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.cta-guarantee {
+  display: flex;
+  justify-content: center;
+}
+
+.guarantee-badge {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 30px;
+  background: rgba(255, 107, 53, 0.2);
+  border-radius: 50px;
+  border: 2px solid var(--primary-orange);
+}
+
+.guarantee-icon {
+  width: 30px;
+  height: 30px;
+  background: var(--primary-orange);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.guarantee-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.guarantee-text strong {
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.guarantee-text span {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .final-cta {
+    padding: 60px 0;
+  }
+  
+  .cta-title {
+    font-size: 2.5rem;
+  }
+  
+  .cta-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .cta-features {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .cta-feature {
+    padding: 15px;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .feature-text {
+    text-align: center;
+  }
+  
+  .cta-contact-options {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .guarantee-badge {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .guarantee-text {
+    text-align: center;
+  }
+}
